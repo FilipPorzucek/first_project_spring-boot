@@ -11,20 +11,20 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
 
-    private final UserService userService; // Zmień typ na UserService
+    private final UserService userService;
 
     @Autowired
-    public UserController(UserService userService){ // Wstrzyknij usługę
+    public UserController(UserService userService){
         this.userService = userService;
     }
 
     @GetMapping
     public List<User> getUsers() {
-        return userService.getUsers(); // Wywołaj metodę z usługi
+        return userService.getUsers();
     }
 
     @PostMapping
     public User addUser(@RequestBody User user){
-        return userService.addUser(user); // Wywołaj metodę z usługi
+        return userService.addUser(user);
     }
 }
