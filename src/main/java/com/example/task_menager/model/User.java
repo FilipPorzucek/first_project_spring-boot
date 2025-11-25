@@ -32,6 +32,13 @@ public class User implements UserDetails {
         this.email = email;
     }
 
+    public User(String username, String password, String email, Role role) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+    }
+
     public int getId() {
         return id;
     }
@@ -53,6 +60,8 @@ public class User implements UserDetails {
         return List.of(new SimpleGrantedAuthority("ROLE_"+role.name()));
     }
 
+
+
     public String getPassword() {
         return password;
     }
@@ -70,6 +79,3 @@ public class User implements UserDetails {
     }
 }
 
-enum Role{
-  USER,ADMIN
-}

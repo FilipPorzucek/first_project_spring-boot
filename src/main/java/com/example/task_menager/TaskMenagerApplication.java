@@ -13,7 +13,6 @@ public class TaskMenagerApplication {
 
 		SpringApplication.run(TaskMenagerApplication.class, args);
 
-
 	}
 
 }
